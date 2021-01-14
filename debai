@@ -1,0 +1,41 @@
+Tạo 1 lớp abstract là lớp vật liệu:
+
+Material class
+String id
+String name
+LocalDate manufacturingDate
+int cost
+----------------------------
+Getter/Setter
+Contsructor
+Phương thức abstract double getAmount
+Phương thức abstract LocalDate getExpiryDate
+
+
+Tạo lớp Bột chiên giòn kế thừa từ lớp vật liệu
+
+CrispyFlour class
+quantity
+------------------------------
+double getAmount = quantity * cost
+LocalDate getExpiryDate = manufacturingDate + 1 năm
+
+Tạo lớp Thịt kế thừa từ lớp vật liệu
+
+Meat class
+
+double weight
+double getAmount = cost * weight
+LocalDate getExpiryDate = manufacturingDate + 7 ngày
+
+
+Tạo interface Chiết khấu
+
+Discount interface
+double getRealMoney()
+
+Tạo 1 lớp quản lý vật liệu
+Tạo mới 5 đối tượng bột, 5 đối tượng thịt
+Nếu là thịt thì triển khai chiết khấu 10%, nếu ngày hết hạn >= (ngày hôm nay +5) thì giảm 30%, nếu nếu ngày hết hạn >= (ngày hôm nay +3) giảm 50%
+Nếu là bột triển khai chiết khấu 5%, nếu ngày hết hạn >= (ngày hôm nay +4 tháng) thì giảm 20%, nếu nếu ngày hết hạn >= (ngày hôm nay +2 tháng) giảm 40%
+Tính số chênh lệch giữa chiết khấu và không chiết khấu tại ngày hôm nay
