@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        MaterialManager materialManager = MaterialManager.getInstance();
+        MaterialManager materialManager = new MaterialManager();
         materialManager.materials[0] = new Meat(1, "chicken", LocalDate.now().plusDays(6), 10000, 20);
         materialManager.materials[1] = new Meat(2, "beef", LocalDate.now().plusDays(5), 15000, 30);
         materialManager.materials[2] = new Meat(3, "sheep", LocalDate.now().plusDays(4), 20000, 40);

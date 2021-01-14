@@ -2,19 +2,8 @@ import java.util.Arrays;
 
 public class MaterialManager {
 
-    private static MaterialManager instance;
-    public Material[] materials = new Material[10];
 
-    public static MaterialManager getInstance() {
-        if (instance == null) {
-            synchronized (MaterialManager.class) {
-                if (instance == null) {
-                    instance = new MaterialManager();
-                }
-            }
-        }
-        return instance;
-    }
+    public Material[] materials = new Material[10];
 
     public Material[] getMaterials() {
         return materials;
